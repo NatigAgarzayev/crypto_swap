@@ -1,0 +1,109 @@
+.footer{
+    padding-bottom: 44px;
+}
+
+.footerInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerLinks{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.footerLeft {
+    line-height: 18px;
+    color: #BABFC7;
+}
+
+.footerLinks > a{
+    color: #BABFC7;
+    line-height: 18px;
+}
+
+.footerLinks > div{
+    color: #BABFC7;
+}
+
+.footerMobile{
+    display: none;
+    padding: 19px 27px;
+}
+
+.footerMobile > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footerMobile > ul > li > a > svg path{ 
+    fill: #3A3B58;
+    transition: fill 0.2s ease;
+}
+.footerMobile > ul > li > a > svg:hover path{ 
+    fill: #40A5F3;
+}
+
+.footerMobile > ul > li > a.active path{
+    fill: #40A5F3;
+}
+
+.footerMobile > ul > li > a{
+    position: relative;
+    display: block;
+    height: 32px;
+}
+.footerMobile > ul > li > a.active .activeDot{
+    display: block;
+}
+
+.activeDot{
+    display: none;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #40A5F3;
+    border-radius: 50%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media(max-width: 991px){
+    .footerLeft{
+        font-size: 12px;
+    }
+    .footerLinks > a{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 768px){
+    .footer{
+        padding-bottom: 0;
+        background-color: #1E1B38;
+    }
+    .footerInner{
+        display: block;        
+    }
+    .footerLeft{
+        display: none;
+    }
+    .footerLinks{
+        display: none;
+    }
+    .footerMobile{
+        display: block;
+        padding: 19px 19px;
+    }
+}
+
+@media(max-width: 400px){
+    .footerMobile > ul{
+        gap: 20px;
+    }
+}
